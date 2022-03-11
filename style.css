@@ -1,0 +1,142 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --Pale_blue: hsl(225, 100%, 94%);
+  --Bright_blue: hsl(245, 75%, 52%);
+  --Very_pale_blue: hsl(225, 100%, 98%);
+  --Desaturated_blue: hsl(224, 23%, 55%);
+  --Dark_blue: hsl(223, 47%, 23%);
+}
+
+body {
+  font-family: "Red Hat Display", sans-serif;
+  background-color: var(--Pale_blue);
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2.5rem 1.25rem;
+  min-height: 100vh;
+  text-align: center;
+}
+
+h2 {
+  font-weight: 900;
+}
+
+h4 {
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
+img{
+  max-width: 100%;
+}
+.bg_image {
+  background-image: url("images/pattern-background-mobile.svg") no-repeat center center/cover;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  height: 60%;
+}
+.card {
+  background-color: var(--Very_pale_blue);
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.main-image {
+  border-radius: 14px 14px 0 0;
+  margin-bottom: 2rem;
+}
+.contents {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contents p {
+  line-height: 1.5;
+  margin: 1.5rem;
+  font-weight: 500;
+  color: var(--Desaturated_blue);
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 1rem 1.5rem;
+}
+
+li:first-child {
+  display: flex;
+  align-items: center;
+  margin-right: 2.5rem;
+}
+
+li:first-child img {
+  margin-right: 0.5rem;
+}
+
+li:first-child .annual div{
+  color: var(--Desaturated_blue);
+}
+
+li a{
+  color: var(--Bright_blue);
+  font-weight: 700;
+}
+
+button {
+  color: var(--Very_pale_blue);
+  font-weight: 700;
+  background-color: var(--Bright_blue);
+  padding: 1.05rem;
+  border-radius: 0.75rem;
+  margin: 1.75rem;
+  border: none;
+  box-shadow: -5px 13px 8px 0px hsl(225deg 100% 94%);
+}
+button:hover{
+  cursor: pointer;
+  background-color: #9c88f7;
+}
+li a:hover{
+  cursor: pointer;
+  text-decoration: none;
+  color: #9c88f7;
+}
+.cancel{
+  margin-bottom: 2rem;
+}
+.cancel a{
+  color: var(--Desaturated_blue);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.cancel a:hover{
+  cursor: pointer;
+  color: black;
+}
+
+@media only screen and (min-width:768px){
+  .bg_image{
+    background: url("images/pattern-background-desktop.svg") no-repeat center/cover;
+    height: 50vh;
+  
+}
+
+  .card{
+    width: 400px;
+  }
+}
